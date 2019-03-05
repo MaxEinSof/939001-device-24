@@ -5,8 +5,59 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+    <header class="main-header container">
+      <nav class="main-navigation">
+        <a class="main-header-logo">
+          <img src="img/logo.svg" alt="Логотип магазина «Девайс»">
+        </a>
+        <div class="user-navigation">
+          <form class="user-navigation-item search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+            <input type="search" name="search-query" id="search-field" placeholder="Поиск по сайту">
+            <button class="search-button" type="submit">Найти</button>
+          </form>
+          <div class="user-authorization">
+            <a class="user-navigation-item login-link" href="#">Войти</a>
+          </div>
+          <a class="user-navigation-item compare-link" href="#">Сравнить</a>
+          <a class="user-navigation-item cart-link" href="#">Корзина</a>
+        </div>
+        <ul class="main-navigation-list">
+          <li class="main-navigation-item">
+            <a href="#">Каталог товаров</a>
+            <ul class="catalog-submenu">
+              <li class="catalog-submenu-item">
+                <a href="#">Виртуальная реальность</a>
+              </li>
+              <li class="catalog-submenu-item">
+                <a href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="catalog-submenu-item">
+                <a href="#">Квадрокоптеры</a>
+              </li>
+              <li class="catalog-submenu-item">
+                <a href="#">Моноподы для селфи</a>
+              </li>
+              <li class="catalog-submenu-item">
+                <a href="#">Умные часы</a>
+              </li>
+              <li class="catalog-submenu-item">
+                <a href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#">Доставка</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#">Гарантия</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
   </body>
 </html>
