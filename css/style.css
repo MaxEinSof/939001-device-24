@@ -47,8 +47,8 @@ img {
 .catalog-submenu,
 .promo-item,
 .services-item,
-.modal-map {
-/* .modal-feedback { */
+.modal-map,
+.modal-feedback {
   display: none;
 }
 
@@ -89,6 +89,11 @@ img {
   font-weight: 300;
 }
 
+.search-field {
+  background-color: transparent;
+  border: none;
+}
+
 .search-field::-webkit-input-placeholder {
   opacity: 0.3;
 }
@@ -126,6 +131,7 @@ img {
 }
 
 .search-button {
+  display: none;
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -141,6 +147,11 @@ img {
 
 .search-button:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form:focus-within .search-button {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .main-header .user-navigation-item:hover,
@@ -209,7 +220,8 @@ img {
   background-color: #e5e5e5;
 }
 
-.slider-button {
+.slider-button,
+.filter-button {
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -283,4 +295,184 @@ img {
 
 .footer-address {
   font-style: normal;
+}
+
+.main-header .logout-link {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.page-title {
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+}
+
+.breadcrumbs {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-item a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.catalog-section-title {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.price-filter label,
+.price-filter input {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.color-filter label,
+.bluetooth-filter label {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+.color-option-input:disabled + label,
+.bluetooth-option-input:disabled + label {
+  color: #a6a6a6;
+}
+
+.sorting-list {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.sorting-list a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-list a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.sorting-current a,
+.sorting-current a:hover,
+.sorting-current a:focus,
+.sorting-current a:active {
+  color: #000000;
+}
+
+.catalog-item-title {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.catalog-item-title a {
+  color: #000000;
+}
+
+.catalog-item-price {
+  font-size: 16px;
+  font-weight: 300;
+  color: #464646;
+}
+
+.catalog-item-compare {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.catalog-item-compare:hover,
+.catalog-item-compare:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog-item-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.pagination {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination-back a,
+.pagination-forward a {
+  color: #000000;
+}
+
+.pagination-back a:hover,
+.pagination-back a:focus,
+.pagination-forward a:hover,
+.pagination-forward a:focus {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.pagination-back a:active,
+.pagination-forward a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+  color: #000000;
+}
+
+.main-footer .user-navigation-item {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.main-footer .user-navigation-item:hover,
+.main-footer .user-navigation-item:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.main-footer .user-navigation-item:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer .logout-link {
+  color: rgba(255, 255, 255, 0.3);
 }

@@ -14,9 +14,9 @@
           <img src="img/header_logo.svg" width="163" height="35" alt="Логотип магазина «Девайс»">
         </a>
         <div class="user-navigation">
-          <form class="user-navigation-item search-form" action="https://echo.htmlacademy.ru" method="get">
-            <label class="visually-hidden" for="search-field">Поиск по сайту</label>
-            <input type="search" name="search-query" id="search-field" placeholder="Поиск по сайту">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+            <label class="visually-hidden" for="search-input">Поиск по сайту</label>
+            <input class="search-field" type="search" name="search-query" id="search-input" placeholder="Поиск по сайту">
             <button class="search-button" type="submit">Найти</button>
           </form>
           <div class="user-authorization">
@@ -27,7 +27,7 @@
           <a class="user-navigation-item cart-link" href="#">Корзина</a>
         </div>
         <ul class="main-navigation-list">
-          <li class="main-navigation-item">
+          <li class="navigation-item" tabindex="0">
             <a href="#">Каталог товаров</a>
             <ul class="catalog-submenu">
               <li class="catalog-submenu-item">
@@ -40,7 +40,7 @@
                 <a href="#">Квадрокоптеры</a>
               </li>
               <li class="catalog-submenu-item">
-                <a href="#">Моноподы для селфи</a>
+                <a>Моноподы для селфи</a>
               </li>
               <li class="catalog-submenu-item">
                 <a href="#">Умные часы</a>
@@ -50,13 +50,13 @@
               </li>
             </ul>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Доставка</a>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Гарантия</a>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Контакты</a>
           </li>
         </ul>
@@ -144,7 +144,7 @@
                 </ul>
               </fieldset>
 
-              <button class="button" type="submit">Показать</button>
+              <button class="button filter-button" type="submit">Показать</button>
             </form>
           </section>
 
@@ -221,11 +221,11 @@
           </section>
 
           <ul class="pagination">
-            <li class="pagination-item pagination-back">
+            <li class="pagination-back">
               <a href="#">Назад</a>
             </li>
             <li class="pagination-item pagination-item-current">
-              <a href="#">1</a>
+              <a>1</a>
             </li>
             <li class="pagination-item">
               <a href="#">2</a>
@@ -233,7 +233,7 @@
             <li class="pagination-item">
               <a href="#">3</a>
             </li>
-            <li class="pagination-item pagination-forward">
+            <li class="pagination-forward">
               <a href="#">Вперед</a>
             </li>
           </ul>
@@ -257,21 +257,21 @@
           </div>
         </div>
         <div class="footer-middle">
-          <address class="footer-address">г. Москва, ул. Строителей, 15</address>
+          <address class="contact-info footer-address">г. Москва, ул. Строителей, 15</address>
           <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Доставка</a>
             </li>
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Гарантия</a>
             </li>
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <p class="footer-phone-number">
+          <p class="contact-info footer-phone-number">
             Тел.:
-            <a href="tel:84954959595">+7 (495) 495-95-95</a>
+            <a href="tel:+74954959595">+7 (495) 495-95-95</a>
           </p>
         </div>
         <div class="footer-bottom">
