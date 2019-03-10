@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header container">
@@ -11,7 +14,7 @@
           <img src="img/header_logo.svg" width="163" height="35" alt="Логотип магазина «Девайс»">
         </a>
         <div class="user-navigation">
-          <form class="user-navigation-item search-form" action="https://echo.htmlacademy.ru" method="get">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search-input">Поиск по сайту</label>
             <input class="search-field" type="search" name="search-query" id="search-input" placeholder="Поиск по сайту">
             <button class="search-button" type="submit">Найти</button>
@@ -23,7 +26,7 @@
           <a class="user-navigation-item cart-link" href="#">Корзина</a>
         </div>
         <ul class="main-navigation-list">
-          <li class="main-navigation-item">
+          <li class="navigation-item" tabindex="0">
             <a href="#">Каталог товаров</a>
             <ul class="catalog-submenu">
               <li class="catalog-submenu-item">
@@ -46,13 +49,13 @@
               </li>
             </ul>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Доставка</a>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Гарантия</a>
           </li>
-          <li class="main-navigation-item">
+          <li class="navigation-item">
             <a href="#">Контакты</a>
           </li>
         </ul>
@@ -68,7 +71,7 @@
           <li class="promo-item slide-selfie-stick slide-show">
             <h3 class="visually-hidden">Монопод Koolehaoda Professional</h3>
             <div class="promo-item-details">
-              <p class="promo-item-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+              <p class="section-description">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
               <table class="promo-item-parameters">
                 <tr class="parameter-values">
                   <td>8,5 м</td>
@@ -81,7 +84,7 @@
                   <th>Материал</th>
                 </tr>
               </table>
-              <p class="promo-item-slogan">Делай селфи, как Бен Стиллер! </p>
+              <p class="section-title">Делай селфи, как Бен Стиллер! </p>
               <a class="button" href="#">Подробнее</a>
             </div>
             <img class="promo-image" src="img/selfie_stick_promo.png" width="384" height="486" alt="Монопод Koolehaoda Professional">
@@ -89,7 +92,7 @@
           <li class="promo-item slide-fitness-tracker">
             <h3 class="visually-hidden">Фитнес-трекер Fitbit Charge</h3>
             <div class="promo-item-details">
-              <p class="promo-item-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+              <p class="section-description">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
               <table class="promo-item-parameters">
                 <tr class="parameter-values">
                   <td>48 часов</td>
@@ -98,7 +101,7 @@
                   <th>Без подзарядки</th>
                 </tr>
               </table>
-              <p class="promo-item-slogan">Худеем правильно!</p>
+              <p class="section-title">Худеем правильно!</p>
               <a class="button" href="#">Подробнее</a>
             </div>
             <img class="promo-image" src="img/fitness_tracker_promo.png" width="345" height="485" alt="Фитнес-трекер Fitbit Charge">
@@ -106,7 +109,7 @@
           <li class="promo-item slide-quadcopter">
             <h3 class="visually-hidden">Квадрокоптер DJI Inspire 1 Pro</h3>
             <div class="promo-item-details">
-              <p class="promo-item-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+              <p class="section-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
               <table class="promo-item-parameters">
                 <tr class="parameter-values">
                   <td>800 м</td>
@@ -117,7 +120,7 @@
                   <th>Радиус поражения</th>
                 </tr>
               </table>
-              <p class="promo-item-slogan">Порхает как бабочка, жалит как пчела!</p>
+              <p class="section-title">Порхает как бабочка, жалит как пчела!</p>
               <a class="button" href="#">Подробнее</a>
             </div>
             <img class="promo-image" src="img/quadcopter_promo.png" width="526" height="334" alt="Квадрокоптер DJI Inspire 1 Pro">
@@ -171,27 +174,27 @@
         <div class="container">
           <ul class="services-slider-controllers">
             <li class="services-switch-item">
-              <button class="button button-delivery" type="button">Доставка</button>
+              <button class="button slider-button button-delivery" type="button">Доставка</button>
             </li>
             <li class="services-switch-item">
-              <button class="button button-warranty" type="button">Гарантия</button>
+              <button class="button slider-button button-warranty" type="button">Гарантия</button>
             </li>
             <li class="services-switch-item">
-              <button class="button button-credit" type="button">Кредит</button>
+              <button class="button slider-button button-credit" type="button">Кредит</button>
             </li>
           </ul>
           <ul class="services-list">
             <li class="services-item slide-delivery slide-show">
-              <h3 class="services-item-title">Доставка</h3>
-              <p class="services-item-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+              <h3 class="section-title">Доставка</h3>
+              <p class="section-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
             <li class="services-item slide-warranty">
-              <h3 class="services-item-title">Гарантия</h3>
-              <p class="services-item-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+              <h3 class="section-title">Гарантия</h3>
+              <p class="section-description">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
             </li>
             <li class="services-item slide-credit">
-              <h3 class="services-item-title">Кредит</h3>
-              <p class="services-item-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <h3 class="section-title">Кредит</h3>
+              <p class="section-description">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
           </ul>
         </div>
@@ -226,8 +229,8 @@
       <div class="container">
         <section class="about-us">
           <h2 class="section-title">О нас</h2>
-          <p class="about-us-feature">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-          <p class="about-us-feature">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <p class="section-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="section-description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
           <ul class="transport-companies-list">
             <li class="transport-companies-item">
               <a href="#">Деловые Линии</a>
@@ -244,7 +247,7 @@
 
         <section class="contacts">
           <h2 class="section-title">Контакты</h2>
-          <p class="contacts-feature">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <p class="section-description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a href="https://yandex.com/maps/">
             <img class="map" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
           </a>
@@ -264,14 +267,14 @@
         <h2 class="visually-hidden">Форма обратной связи</h2>
         <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="modal-addresser">
-            <label for="modal-name-field">Ваше имя:</label>
+            <label class="modal-label" for="modal-name-field">Ваше имя:</label>
             <input class="modal-field" type="text" name="name" id="modal-name-field" placeholder="Имя Фамилия">
           </p>
           <p class="modal-addresser">
-            <label for="modal-email-field">Ваш e-mail:</label>
+            <label class="modal-label" for="modal-email-field">Ваш e-mail:</label>
             <input class="modal-field" type="email" name="email" id="modal-email-field" placeholder="email@example.com">
           </p>
-          <label for="modal-message-field">Текст письма:</label>
+          <label class="modal-label" for="modal-message-field">Текст письма:</label>
           <textarea class="modal-field" name="message" id="modal-message-field" placeholder="В свободной форме"></textarea>
           <button class="button" type="submit">Отправить</button>
         </form>
@@ -296,19 +299,19 @@
           </div>
         </div>
         <div class="footer-middle">
-          <address class="footer-address">г. Москва, ул. Строителей, 15</address>
+          <address class="contact-info footer-address">г. Москва, ул. Строителей, 15</address>
           <ul class="footer-navigation-list">
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Доставка</a>
             </li>
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Гарантия</a>
             </li>
-            <li class="footer-navigation-item">
+            <li class="navigation-item">
               <a href="#">Контакты</a>
             </li>
           </ul>
-          <p class="footer-phone-number">
+          <p class="contact-info footer-phone-number">
             Тел.:
             <a href="tel:+74954959595">+7 (495) 495-95-95</a>
           </p>
