@@ -68,8 +68,28 @@ img {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.main-header {
+.container {
+  width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main-header.container {
+  box-sizing: border-box;
+  width: 1160px;
+  padding: 21px 56px 50px 60px;
   background-color: rgba(240, 197, 46, 0.5);
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.main-header-logo {
+  margin-right: auto;
+  margin-bottom: 21px;
 }
 
 .main-header a,
@@ -89,10 +109,31 @@ img {
   font-weight: 300;
 }
 
+.user-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.search-form {
+  position: relative;
+  margin-right: 185px;
+}
+
 .search-field {
+  box-sizing: border-box;
+  width: 355px;
+  padding-left: 38px;
+  padding-bottom: 3px;
   letter-spacing: 0.01em;
   background-color: transparent;
   border: none;
+}
+
+.search-field:focus {
+  padding-bottom: 1px;
+  outline: none;
+  border-bottom: 2px solid #000000;
 }
 
 .search-field::-webkit-input-placeholder {
@@ -132,6 +173,9 @@ img {
 }
 
 .search-button {
+  position: absolute;
+  top: -2px;
+  right: -60px;
   display: none;
   line-height: 30px;
   font-weight: 300;
@@ -150,9 +194,14 @@ img {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.search-form:focus-within .search-button {
+.search-field:focus + .search-button {
   display: inline-block;
   vertical-align: top;
+}
+
+.user-authorization {
+  width: 260px;
+  margin-right: 27px;
 }
 
 .main-header .user-navigation-item:hover,
@@ -167,17 +216,77 @@ img {
   opacity: 0.3;
 }
 
+.login-link {
+  padding-left: 27px;
+}
+
+.user-name {
+  margin-right: 15px;
+  padding-left: 27px;
+}
+
+.compare-link {
+  margin-right: 41px;
+  padding-left: 20px;
+}
+
+.cart-link {
+  padding-left: 22px;
+}
+
+.main-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-navigation-catalog {
+  position: relative;
+  margin-right: 321px;
+}
+
+.main-navigation-delivery {
+  margin-right: 34px;
+}
+
+.main-navigation-warranty {
+  margin-right: 108px;
+}
+
 .navigation-item:hover .catalog-submenu,
 .navigation-item:focus .catalog-submenu {
-  display: block;
+  display: flex;
 }
 
 .navigation-item:focus-within .catalog-submenu {
-  display: block;
+  display: flex;
 }
 
 .catalog-submenu {
+  flex-wrap: wrap;
+  position: absolute;
+  top: 24px;
+  left: -60px;
+  box-sizing: border-box;
+  width: 1160px;
+  padding: 23px 460px 32px 60px;
   line-height: 36px;
+  background-color: #f7e296;
+  list-style: none;
+}
+
+.catalog-submenu-item {
+  width: 200px;
+}
+
+.catalog-submenu-item:nth-child(3n+1) {
+  margin-right: 40px;
+}
+
+.catalog-submenu-item:last-child {
+  margin-right: 200px;
 }
 
 .navigation-item > a {
