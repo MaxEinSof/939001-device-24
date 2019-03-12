@@ -53,10 +53,14 @@ img {
 }
 
 .slide-show {
-  display: block;
+  display: flex;
 }
 
 .button {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 8px;
+  padding-bottom: 8px;
   line-height: 24px;
   font-weight: 800;
   text-transform: uppercase;
@@ -269,6 +273,7 @@ img {
   position: absolute;
   top: 24px;
   left: -60px;
+  z-index: 1;
   box-sizing: border-box;
   width: 1160px;
   padding: 23px 460px 32px 60px;
@@ -294,18 +299,91 @@ img {
   letter-spacing: 0.2em;
 }
 
+.promo-slider {
+  position: relative;
+  min-height: 500px;
+  margin-bottom: 94px;
+}
+
+.promo-list {
+  margin: 0;
+  padding: 0;
+}
+
+.promo-item {
+  flex-direction: row-reverse;
+  align-items: flex-start;
+}
+
+.slide-selfie-stick .promo-image {
+  margin-right: 126px;
+  padding-top: 2px;
+}
+
+.slide-fitness-tracker .promo-image {
+  margin-right: 139px;
+  padding-top: 14px;
+}
+
+.slide-quadcopter .promo-image {
+  margin-right: 43px;
+  padding-top: 67px;
+}
+
+.promo-item-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 500px;
+  padding-top: 82px;
+  padding-right: 60px;
+}
+
 .section-title {
+  margin: 0;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
 }
 
 .promo-slider .section-title {
+  margin-bottom: 19px;
   line-height: 56px;
 }
 
+.promo-item-details .section-description {
+  order: 1;
+  margin-bottom: 43px;
+}
+
+.promo-item-details .button {
+  order: 2;
+  margin-bottom: 47px;
+  padding-left: 43px;
+  padding-right: 41px;
+}
+
+.promo-item-parameters {
+  order: 3;
+}
+
 .section-description {
+  margin: 0;
   color: #464646;
+}
+
+.slide-selfie-stick .section-description {
+  width: 485px;
+}
+
+.slide-fitness-tracker .section-description,
+.slide-quadcopter .section-description {
+  width: 460px;
+}
+
+.promo-item-parameters td,
+.promo-item-parameters th {
+  padding: 0;
 }
 
 .parameter-values {
@@ -314,12 +392,32 @@ img {
   font-weight: 300;
 }
 
+.parameter-values td:first-child {
+  width: 156px;
+}
+
+.parameter-values td:nth-child(2) {
+  width: 137px;
+}
+
 .parameter-titles th {
+  padding-top: 6px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
   color: #464646;
+}
+
+.promo-slider-controllers {
+  position: absolute;
+  right: 100px;
+  bottom: 155px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .catalog-sections-item a:active {
