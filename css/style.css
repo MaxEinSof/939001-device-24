@@ -90,6 +90,7 @@ img {
 }
 
 .search-field {
+  letter-spacing: 0.01em;
   background-color: transparent;
   border: none;
 }
