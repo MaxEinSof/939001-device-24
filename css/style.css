@@ -243,7 +243,12 @@ img {
 .catalog-sections-list,
 .brands-list,
 .footer-navigation-list,
-.footer-social-list {
+.footer-social-list,
+.breadcrumbs,
+.sorting-list,
+.sorting-direction,
+.catalog-list,
+.pagination {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -456,7 +461,9 @@ img {
 
 .services-slider-controllers,
 .services-list,
-.transport-companies-list {
+.transport-companies-list,
+.color-list,
+.bluetooth-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -732,21 +739,34 @@ textarea.modal-field {
   background-color: #7e7e7e;
 }
 
+.inner-page .main-header {
+  margin-bottom: 38px;
+}
+
 .main-header .logout-link {
   color: rgba(0, 0, 0, 0.3);
 }
 
 .page-title {
+  margin: 0;
+  margin-bottom: 23px;
+  padding-left: 59px;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
 }
 
 .breadcrumbs {
+  margin-bottom: 47px;
+  padding-left: 59px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 300;
   color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs-item {
+  margin-right: 37px;
 }
 
 .breadcrumbs-item a {
@@ -762,11 +782,55 @@ textarea.modal-field {
   color: rgba(0, 0, 0, 0.1);
 }
 
+.catalog-background .container {
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 77px;
+}
+
+.filter {
+  box-sizing: border-box;
+  width: 328px;
+  padding-left: 60px;
+  padding-right: 68px;
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 832px;
+  padding-left: 72px;
+}
+
 .catalog-section-title {
+  margin: 0;
   font-size: 16px;
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+}
+
+.filter .catalog-section-title {
+  margin-bottom: 104px;
+}
+
+.filter-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-form .price-filter {
+  margin-bottom: 46px;
+}
+
+.price-range {
+  height: 70px;
+}
+
+.price-filter input {
+  border: none;
 }
 
 .price-filter label,
@@ -776,6 +840,24 @@ textarea.modal-field {
   font-weight: 300;
   letter-spacing: normal;
   color: rgba(0, 0, 0, 0.2);
+}
+
+.filter-form .color-filter {
+  margin-bottom: 44px;
+}
+
+.filter-form .bluetooth-filter {
+  margin-bottom: 30px;
+}
+
+.color-filter .filter-title,
+.bluetooth-filter .filter-title {
+  margin-bottom: 18px;
+}
+
+.color-option,
+.bluetooth-option {
+  padding-left: 39px;
 }
 
 .color-filter label,
@@ -791,12 +873,32 @@ textarea.modal-field {
   color: #a6a6a6;
 }
 
+.filter-button {
+  width: 100%;
+}
+
+.sorting {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 81px;
+}
+
+.sorting .catalog-section-title {
+  margin-right: 56px;
+}
+
 .sorting-list {
+  width: 460px;
+  padding-top: 2px;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
   letter-spacing: normal;
+}
+
+.sorting-option {
+  margin-right: 29px;
 }
 
 .sorting-list a {
@@ -819,7 +921,30 @@ textarea.modal-field {
   color: #000000;
 }
 
+.sorting-direction {
+  margin-left: auto;
+}
+
+.catalog-list {
+  justify-content: space-between;
+}
+
+.catalog-item {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 360px;
+  margin-bottom: 35px;
+  padding-top: 11px;
+}
+
 .catalog-item-title {
+  order: 1;
+  width: 260px;
+  margin: 0;
   font-size: 18px;
   font-weight: 800;
 }
@@ -829,12 +954,30 @@ textarea.modal-field {
 }
 
 .catalog-item-price {
+  order: 2;
+  width: 80px;
+  margin: 0;
   font-size: 16px;
   font-weight: 300;
   color: #464646;
+  text-align: right;
+}
+
+.catalog-item-button {
+  position: absolute;
+  top: 184px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  min-width: 200px;
 }
 
 .catalog-item-compare {
+  position: absolute;
+  top: 238px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 20px;
@@ -851,15 +994,40 @@ textarea.modal-field {
   color: rgba(0, 0, 0, 0.2);
 }
 
+.catalog-item-image {
+  margin-bottom: 32px;
+}
+
 .pagination {
+  position: relative;
+  justify-content: center;
+  padding: 24px 160px 22px 160px;
   font-size: 16px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0.08);
 }
 
+.pagination-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.pagination-forward {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
 .pagination-back a,
 .pagination-forward a {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 23px 30px;
   color: #000000;
 }
 
@@ -873,6 +1041,10 @@ textarea.modal-field {
 .pagination-back a:active,
 .pagination-forward a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item:not(:nth-last-child(2)) {
+  margin-right: 26px;
 }
 
 .pagination-item a {
