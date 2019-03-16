@@ -586,6 +586,7 @@ img {
 }
 
 .catalog-sections-item {
+  position: relative;
   width: 160px;
   margin-right: 40px;
   margin-bottom: 35px;
@@ -596,8 +597,82 @@ img {
   margin-right: 0;
 }
 
-.catalog-sections-item a:active {
+.catalog-section-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  background-color: rgba(240, 197, 46, 0.5);
+}
+
+.catalog-section-link::after {
+  content: "";
+  position: absolute;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.catalog-section-link:hover::before,
+.catalog-section-link:focus::before {
+  background-color: rgba(240, 197, 46, 1);
+}
+
+.catalog-section-link:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-section-link:active::after {
+  opacity: 0.3;
+}
+
+.section-vr::after {
+  top: 52px;
+  left: 31px;
+  width: 97px;
+  height: 55px;
+  background-image: url("../img/vr_icon.svg");
+}
+
+.section-monopod::after {
+  top: 43px;
+  left: 38px;
+  width: 86px;
+  height: 117px;
+  background-image: url("../img/monopod_icon.svg");
+}
+
+.section-action-cam::after {
+  top: 38px;
+  left: 49px;
+  width: 71px;
+  height: 87px;
+  background-image: url("../img/action_cam_icon.svg");
+}
+
+.section-fitness-tracker::after {
+  top: 50px;
+  left: 28px;
+  width: 107px;
+  height: 65px;
+  background-image: url("../img/fitness_tracker_icon.svg");
+}
+
+.section-smartwatch::after {
+  top: 32px;
+  left: 55px;
+  width: 56px;
+  height: 98px;
+  background-image: url("../img/smartwatch_icon.svg");
+}
+
+.section-quadcopter::after {
+  top: 49px;
+  left: 13px;
+  width: 132px;
+  height: 69px;
+  background-image: url("../img/quadcopter_icon.svg");
 }
 
 .services-slider {
