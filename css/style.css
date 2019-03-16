@@ -57,6 +57,8 @@ img {
 }
 
 .button {
+  position: relative;
+  z-index: 1;
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
@@ -67,6 +69,23 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: #000000;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 8px;
+  background-color: #f0c52e;
+  transition: height 0.5s;
+}
+
+.button:hover::before {
+  height: 100%;
 }
 
 .button:active {
@@ -96,6 +115,15 @@ img {
 .main-header-logo {
   margin-right: auto;
   margin-bottom: 19px;
+}
+
+.main-header-logo[href]:hover,
+.main-header-logo[href]:focus {
+  opacity: 0.6;
+}
+
+.main-header-logo[href]:active {
+  opacity: 0.3;
 }
 
 .main-header a,
@@ -381,6 +409,8 @@ img {
   position: relative;
   min-height: 500px;
   margin-bottom: 94px;
+  background-image: linear-gradient(to bottom, #f7e296, #f7e296 113px, #ffffff 113px, #ffffff 100%);
+  background-clip: content-box;
 }
 
 .promo-list {
@@ -389,8 +419,31 @@ img {
 }
 
 .promo-item {
+  position: relative;
   flex-direction: row-reverse;
   align-items: flex-start;
+}
+
+.promo-item::before {
+  position: absolute;
+  top: -12px;
+  right: 47px;
+  font-size: 179px;
+  line-height: 179px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.slide-selfie-stick::before {
+  content: "01";
+}
+
+.slide-fitness-tracker::before {
+  content: "02";
+}
+
+.slide-quadcopter::before {
+  content: "03";
 }
 
 .slide-selfie-stick .promo-image {
@@ -409,12 +462,23 @@ img {
 }
 
 .promo-item-details {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 500px;
   padding-top: 82px;
   padding-right: 60px;
+}
+
+.promo-item-details::before {
+  content: "";
+  position: absolute;
+  top: 39px;
+  left: 0;
+  width: 100px;
+  height: 7px;
+  background-color: #ffffff;
 }
 
 .section-title {
@@ -488,13 +552,33 @@ img {
 
 .promo-slider-controllers {
   position: absolute;
-  right: 100px;
-  bottom: 155px;
+  right: 103px;
+  bottom: 154px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.promo-switch-item:not(:last-child) {
+  margin-right: 21px;
+}
+
+.switch-button {
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+
+.switch-button-current {
+  box-shadow: 
+    inset 0 0 0 2px #ffffff,
+    inset 0 0 0 3px #000000;
 }
 
 .catalog-sections {
