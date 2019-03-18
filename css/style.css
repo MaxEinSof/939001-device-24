@@ -1467,8 +1467,13 @@ textarea.modal-field {
   background: url("../img/checkbox_off.svg") 0 0 no-repeat;
 }
 
+.color-option-input:active + label::before,
 .color-option-input:checked + label::before {
   background-image: url("../img/checkbox_on.svg");
+}
+
+.color-option-input:checked:active + label::before {
+  background-image: url("../img/checkbox_off.svg");
 }
 
 .bluetooth-option label::before {
@@ -1483,6 +1488,7 @@ textarea.modal-field {
   border-radius: 50%;
 }
 
+.bluetooth-option-input:active + label::after,
 .bluetooth-option-input:checked + label::after {
   content: "";
   position: absolute;
