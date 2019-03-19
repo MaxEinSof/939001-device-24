@@ -224,7 +224,7 @@ img {
 .search-field:-webkit-autofill,
 .search-field:-webkit-autofill:hover, 
 .search-field:-webkit-autofill:focus {
-  background-color: transparent !important;
+  background-color: transparent !important; /* переопределяет цвет фона строки поиска при выборе из списка раннее введённых поисковых запросов в браузере Google Chrome */
   border-bottom: 2px solid #000000;
   padding-bottom: 1px;
   -webkit-text-fill-color: #000000;
@@ -1500,6 +1500,10 @@ textarea.modal-field {
   border-radius: 50%;
 }
 
+.bluetooth-option-input:checked:active + label::after {
+  display: none;
+}
+
 .color-filter label,
 .bluetooth-filter label {
   font-family: "Open Sans", "Arial", sans-serif;
@@ -1516,6 +1520,12 @@ textarea.modal-field {
 .bluetooth-option-input:hover + label::after,
 .bluetooth-option-input:focus + label::after {
   opacity: 0.6;
+}
+
+.color-option-input:active + label::before,
+.bluetooth-option-input:active + label::before,
+.bluetooth-option-input:active + label::after {
+  opacity: 1;
 }
 
 .color-option-input:disabled + label,
