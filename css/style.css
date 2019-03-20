@@ -571,6 +571,7 @@ img {
 .promo-item-details .button {
   order: 2;
   min-width: 220px;
+  max-width: 260px;
   margin-bottom: 47px;
 }
 
@@ -627,6 +628,7 @@ img {
   bottom: 159px;
   display: flex;
   flex-wrap: wrap;
+  max-width: 180px;
   margin: 0;
   padding: 0;
   line-height: 12px;
@@ -1140,8 +1142,13 @@ textarea.modal-field {
 
 .footer-top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 25px;
+}
+
+.main-footer-logo {
+  margin-right: 200px;
 }
 
 .main-footer .user-navigation {
