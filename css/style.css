@@ -99,9 +99,7 @@ img {
   padding: 0 20px;
 }
 
-.main-header.container {
-  box-sizing: border-box;
-  width: 1160px;
+.main-header {
   padding: 23px 56px 50px 60px;
   background-color: #f7e296;
   background-image: linear-gradient(to bottom, #ffffff, #ffffff 40px, #f7e296 40px, #f7e296 100%);
@@ -1345,6 +1343,8 @@ textarea.modal-field {
   box-sizing: border-box;
   width: 328px;
   padding: 22px 68px 77px 60px;
+  background-color: #efefef;
+  background-image: linear-gradient(to bottom, #dbdbdb, #dbdbdb 70px,#efefef 70px, #efefef 100%);
 }
 
 .content-column {
