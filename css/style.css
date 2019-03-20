@@ -114,8 +114,10 @@ img {
 }
 
 .main-header-logo {
+  width: 163px;
+  height: 40px;
   margin-right: auto;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .main-header-logo[href]:hover,
@@ -150,11 +152,12 @@ img {
 .main-header .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 35px;
+  margin-bottom: 29px;
 }
 
 .search-form {
   position: relative;
+  display: flex;
   margin-right: 185px;
 }
 
@@ -172,15 +175,17 @@ img {
 .search-field {
   box-sizing: border-box;
   width: 355px;
+  height: 40px;
   padding-left: 38px;
-  padding-bottom: 3px;
+  padding-right: 20px;
+  padding-bottom: 9px;
   letter-spacing: 0.01em;
   background-color: transparent;
   border: none;
 }
 
 .search-field:focus {
-  padding-bottom: 1px;
+  padding-bottom: 7px;
   outline: none;
   border-bottom: 2px solid #000000;
 }
@@ -226,7 +231,7 @@ img {
 .search-field:-webkit-autofill:focus {
   background-color: transparent !important; /* переопределяет цвет фона строки поиска при выборе из списка раннее введённых поисковых запросов в браузере Google Chrome */
   border-bottom: 2px solid #000000;
-  padding-bottom: 1px;
+  padding-bottom: 7px;
   -webkit-text-fill-color: #000000;
   -webkit-box-shadow: 0 0 0px 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -234,9 +239,13 @@ img {
 
 .search-button {
   position: absolute;
-  top: -2px;
-  right: -60px;
+  top: -9px;
+  right: -85px;
   display: none;
+  box-sizing: border-box;
+  width: 85px;
+  height: 49px;
+  padding: 0;
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.01em;
@@ -262,6 +271,11 @@ img {
 .search-form:focus-within .search-button {
   display: inline-block;
   vertical-align: top;
+}
+
+.search-form:focus-within .search-field {
+  padding-bottom: 7px;
+  border-bottom: 2px solid #000000;
 }
 
 .main-header .user-authorization {
@@ -389,7 +403,8 @@ img {
 
 .main-navigation-catalog {
   position: relative;
-  margin-right: 321px;
+  width: 222px;
+  margin-right: 318px;
 }
 
 .main-navigation-catalog::before,
@@ -397,7 +412,7 @@ img {
   content: "";
   position: absolute;
   top: 11px;
-  right: -27px;
+  right: -24px;
   width: 16px;
   height: 2px;
   background-color: rgba(39, 37, 37, 0.3);
@@ -409,11 +424,17 @@ img {
 }
 
 .main-navigation-delivery {
+  width: 124px;
   margin-right: 34px;
 }
 
 .main-navigation-warranty {
+  width: 115px;
   margin-right: 108px;
+}
+
+.main-navigation-contacts {
+  width: 123px;
 }
 
 .main-navigation-catalog:hover .catalog-submenu,
@@ -599,16 +620,18 @@ img {
   line-height: 20px;
   font-weight: 300;
   color: #464646;
+  text-align: left;
 }
 
 .promo-slider-controllers {
   position: absolute;
   right: 103px;
-  bottom: 154px;
+  bottom: 159px;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  line-height: 12px;
   list-style: none;
 }
 
@@ -642,6 +665,11 @@ img {
   margin-right: 40px;
   margin-bottom: 35px;
   padding-top: 194px;
+}
+
+.section-fitness-tracker {
+  width: 161px;
+  margin-right: 39px;
 }
 
 .catalog-sections-item:nth-child(6n) {
@@ -678,7 +706,7 @@ img {
   opacity: 0.3;
 }
 
-.section-vr::after {
+.section-vr .catalog-section-link::after {
   top: 52px;
   left: 31px;
   width: 97px;
@@ -686,7 +714,7 @@ img {
   background-image: url("../img/vr_icon.svg");
 }
 
-.section-monopod::after {
+.section-monopod .catalog-section-link::after {
   top: 43px;
   left: 38px;
   width: 86px;
@@ -694,7 +722,7 @@ img {
   background-image: url("../img/monopod_icon.svg");
 }
 
-.section-action-cam::after {
+.section-action-cam .catalog-section-link::after {
   top: 38px;
   left: 49px;
   width: 71px;
@@ -702,7 +730,7 @@ img {
   background-image: url("../img/action_cam_icon.svg");
 }
 
-.section-fitness-tracker::after {
+.section-fitness-tracker .catalog-section-link::after {
   top: 50px;
   left: 28px;
   width: 107px;
@@ -710,7 +738,7 @@ img {
   background-image: url("../img/fitness_tracker_icon.svg");
 }
 
-.section-smartwatch::after {
+.section-smartwatch .catalog-section-link::after {
   top: 32px;
   left: 55px;
   width: 56px;
@@ -718,7 +746,7 @@ img {
   background-image: url("../img/smartwatch_icon.svg");
 }
 
-.section-quadcopter::after {
+.section-quadcopter .catalog-section-link::after {
   top: 49px;
   left: 13px;
   width: 132px;
@@ -792,6 +820,12 @@ img {
   width: 277px;
   height: 100%;
   background-color: #000000;
+}
+
+.slider-button span {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .services-item {
@@ -1143,8 +1177,9 @@ textarea.modal-field {
 
 .footer-navigation-list {
   box-sizing: border-box;
-  width: 440px;
-  padding: 6px 3px 0 7px;
+  width: 444px;
+  padding-top: 6px;
+  padding-left: 9px;
 }
 
 .footer-navigation-list .navigation-item:not(:nth-child(3n)) {
@@ -1159,7 +1194,6 @@ textarea.modal-field {
 .footer-bottom {
   position: relative;
   display: flex;
-  justify-content: space-between;
   padding-left: 360px;
 }
 
@@ -1176,6 +1210,7 @@ textarea.modal-field {
 .footer-social-list {
   justify-content: center;
   width: 440px;
+  margin-right: auto;
   padding-top: 2px;
 }
 
