@@ -109,7 +109,7 @@ mapClose.addEventListener("click", function (evt) {
 });
 
 document.addEventListener("click", function (evt) {
-  if (!evt.target.matches(".modal-feedback *, .contacts-button") && feedback.classList.contains("modal-show")) { 
+  if (!evt.target.matches(".modal-feedback, .modal-feedback *, .contacts-button") && feedback.classList.contains("modal-show")) { 
     feedback.classList.remove("modal-show");
     feedback.classList.remove("modal-animate");
     feedback.classList.remove("modal-error");
