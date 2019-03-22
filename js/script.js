@@ -58,11 +58,6 @@ button.addEventListener("click", function (evt) {
     email.value = storageEmail;
     message.focus();
   }
-  document.addEventListener("click", function (evt) {
-    if (!evt.target.matches(".modal-feedback *") && feedback.classList.contains("modal-show")) { 
-      feedback.classList.remove("modal-show");
-    }
-  });
 });
 
 form.addEventListener("submit", function (evt) {
@@ -111,6 +106,18 @@ mapClose.addEventListener("click", function (evt) {
   evt.preventDefault();
   map.classList.remove("modal-show");
   map.classList.remove("modal-animate");
+});
+
+document.addEventListener("click", function (evt) {
+  if (!evt.target.matches(".modal-feedback *, .contacts-button") && feedback.classList.contains("modal-show")) { 
+    feedback.classList.remove("modal-show");
+    feedback.classList.remove("modal-animate");
+    feedback.classList.remove("modal-error");
+  }
+  if (!evt.target.matches(".modal-map *, .map-link *") && map.classList.contains("modal-show")) {
+    map.classList.remove("modal-show");
+    map.classList.remove("modal-animate");
+  }
 });
 
 buttonSelfie.addEventListener("click", function (evt) {

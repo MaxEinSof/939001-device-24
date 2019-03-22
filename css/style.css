@@ -334,9 +334,8 @@ img {
   bottom: 0;
   display: none;
   box-sizing: border-box;
-  min-width: 85px;
-  max-width: 145px;
-  height: 49px;
+  width: 85px;
+  min-height: 49px;
   padding: 0;
   line-height: 30px;
   font-weight: 300;
