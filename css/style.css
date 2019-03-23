@@ -1509,11 +1509,12 @@ textarea.modal-field {
   position: relative;
   display: flex;
   align-items: center;
+  width: 200px;
   height: 70px;
 }
 
 .price-range-scale {
-  width: 100%;
+  width: 200px;
   height: 2px;
   background-color: #dbdbdb;
 }
@@ -1829,24 +1830,23 @@ textarea.modal-field {
   text-align: right;
 }
 
-.catalog-item-button {
+.catalog-item-options {
   position: absolute;
-  top: 184px;
+  top: 183px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   display: none;
+  margin: 0;
+  text-align: center;
+}
+
+.catalog-item-button {
   min-width: 200px;
+  margin-bottom: 11px;
 }
 
 .catalog-item-compare {
-  position: absolute;
-  top: 238px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  z-index: 1;
-  display: none;
   font-family: "Open Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 20px;
@@ -1865,17 +1865,14 @@ textarea.modal-field {
   background-color: rgba(238, 238, 238, 0.7);
 }
 
-.catalog-item:hover .catalog-item-button,
-.catalog-item:focus .catalog-item-button,
-.catalog-item:hover .catalog-item-compare,
-.catalog-item:focus .catalog-item-compare,
+.catalog-item:hover .catalog-item-options,
+.catalog-item:focus .catalog-item-options,
 .catalog-item:hover::before,
 .catalog-item:focus::before {
   display: block;
 }
 
-.catalog-item:focus-within .catalog-item-button,
-.catalog-item:focus-within .catalog-item-compare,
+.catalog-item:focus-within .catalog-item-options,
 .catalog-item:focus-within::before {
   display: block;
 }
@@ -1957,7 +1954,7 @@ textarea.modal-field {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination-item:not(:nth-last-child(2)) {
+.pagination-item {
   margin-right: 26px;
 }
 
